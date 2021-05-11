@@ -34,9 +34,9 @@ let biciclette = [
     },
 ];
 
-var indice;
+let indice;
 
-var pesoMinore = biciclette[0].peso;
+let pesoMinore = biciclette[0].peso;
 for (var i = 0; i < biciclette.length; i++){
     if (biciclette[i].peso < pesoMinore) {
         pesoMinore = biciclette[i].peso;
@@ -44,6 +44,11 @@ for (var i = 0; i < biciclette.length; i++){
     }
 }
 
-var { nome, peso } = biciclette[indice];
+const { nome, peso } = biciclette[indice];
 
 console.log(nome, peso);
+document.getElementById("bici_peso_minore").insertAdjacentHTML("beforeend",
+    `
+    La bicicletta con il peso minore è: ${nome}, e il suo peso è di ${peso} kg!
+    `
+);
