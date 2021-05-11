@@ -116,3 +116,18 @@ for (var i = 0; i < squadre.length; i++){
     squadre[i].puntiFatti = getRandomIntInclusive(0, 100);
     squadre[i].falliSubiti = getRandomIntInclusive(0, 3000);
 }
+
+//Infine usando la destrutturazione creiamo un nuovo array i cui elementi 
+//contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+let nuovoArray = [];
+
+for (var i = 0; i < squadre.length; i++){
+    let { nome, falliSubiti } = squadre[i];
+    nuovoArray.push({});
+    nuovoArray[i].nome = nome;
+    nuovoArray[i].falliSubiti = falliSubiti;
+}
+
+console.log(squadre);
+console.log(nuovoArray);
