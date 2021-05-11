@@ -33,3 +33,12 @@ let biciclette = [
         peso: 7.3
     },
 ];
+
+var pesoMinore = biciclette[0].peso;
+for (var i = 0; i < biciclette.length; i++){
+    if (biciclette[i].peso < pesoMinore) {
+        pesoMinore = biciclette[i].peso;
+    }
+}
+
+console.log(pesoMinore);
