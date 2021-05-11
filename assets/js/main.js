@@ -121,9 +121,10 @@ let nuovoArray = [];
 
 for (var i = 0; i < squadre.length; i++){
     let { nome, falliSubiti } = squadre[i];
-    nuovoArray.push({});
-    nuovoArray[i].nome = nome;
-    nuovoArray[i].falliSubiti = falliSubiti;
+    nuovoArray.push({
+        nome,
+        falliSubiti
+    });
 }
 
 console.log(nuovoArray);
