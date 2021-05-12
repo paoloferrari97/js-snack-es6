@@ -137,17 +137,19 @@ console.log(nuovoArray);
 //Usiamo i nuovi metodi degli array foreach o filter.
 
 const numeri = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-const numeroUno = 5;
+const numeroUno = 4;
 const numeroDue = 16;
 
 //1 modo
-let nuoviNumeri = [];
-
-numeri.forEach((numero, i, numeri) => {
-    if (i > numeroUno && i < numeroDue) {
-        nuoviNumeri.push(numero);
-    }
-});
+const numeriCompresi = (array, numeroUno, numeroDue) => {
+    let nuoviNumeri = [];
+    array.forEach((numero, i, array) => {
+        if (i > numeroUno && i < numeroDue) {
+            nuoviNumeri.push(numero);
+        }
+    });
+    return nuoviNumeri;
+}
 
 console.log(numeri);
-console.log(nuoviNumeri);
+console.log(numeriCompresi(numeri, numeroUno, numeroDue));
