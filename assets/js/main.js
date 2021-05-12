@@ -135,10 +135,10 @@ console.log(nuovoArray);
 //Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
 //La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 //Usiamo i nuovi metodi degli array foreach o filter.
-
+const lettere = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "z"];
 const numeri = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-const numeroUno = 4;
-const numeroDue = 16;
+const numeroUno = 7;
+const numeroDue = 14;
 
 //1 modo
 const numeriCompresi = (array, numeroUno, numeroDue) => {
@@ -153,3 +153,20 @@ const numeriCompresi = (array, numeroUno, numeroDue) => {
 
 console.log(numeri);
 console.log(numeriCompresi(numeri, numeroUno, numeroDue));
+console.log(numeriCompresi(lettere, numeroUno, numeroDue));
+
+//2 modo
+const numeriCompresi2 = (array, numeroUno, numeroDue) => {
+    const nuoviNumeri = array.filter((numero) => {
+        const index = array.indexOf(numero);
+        if (index > numeroUno && index < numeroDue) {
+            return true;
+        }
+        return false;
+    });
+    return nuoviNumeri;
+}
+
+console.log(numeri);
+console.log(numeriCompresi2(numeri, numeroUno, numeroDue));
+console.log(numeriCompresi2(lettere, numeroUno, numeroDue));
