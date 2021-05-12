@@ -143,7 +143,7 @@ const numeroDue = 14;
 //1 modo
 const numeriCompresi = (array, numeroUno, numeroDue) => {
     let nuoviNumeri = [];
-    array.forEach((numero, i, array) => {
+    array.forEach((numero, i) => {
         if (i > numeroUno && i < numeroDue) {
             nuoviNumeri.push(numero);
         }
@@ -157,8 +157,7 @@ console.log(numeriCompresi(lettere, numeroUno, numeroDue));
 
 //2 modo
 const numeriCompresi2 = (array, numeroUno, numeroDue) => {
-    const nuoviNumeri = array.filter((numero) => {
-        const index = array.indexOf(numero);
+    const nuoviNumeri = array.filter((numero, index) => {
         if (index > numeroUno && index < numeroDue) {
             return true;
         }
