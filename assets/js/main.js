@@ -34,7 +34,7 @@ let biciclette = [
     }
 ];
 
-let indice;
+let indice = 0;
 
 let pesoMinore = biciclette[0].peso;
 for (var i = 0; i < biciclette.length; i++){
